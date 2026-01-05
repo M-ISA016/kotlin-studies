@@ -7,32 +7,38 @@ fun calculateDiscount(originalPrice: Double = 100.0, originalPrice2: Double = 20
                       String = "Black Friday", promotion2: String = "Christmas") {
 
     val total = originalPrice - discount + tax
-
-    println("Transaction Summary ======")
-    println()
-    println("Original Price: R$$originalPrice,00")
-    println("Discount: R$$discount,00")
-    println("Tax: R$$tax,00")
-    println("Promotion: $promotion")
-    println("Final Price: R$$total,00")
-    println()
+    val summary = """"
+    Transaction Summary ======")
+    
+    Original Price: R$$originalPrice,00")
+    Discount: R$$discount,00")
+    Tax: R$$tax,00")
+    Promotion: $promotion")
+    Final Price: R$$total,00")
+    
+    """.trimIndent()
+    println(summary)
 
     val total2 = originalPrice2 + tax2
-
-    println("Transaction Summary ======")
-    println()
-    println("Original Price: R$$originalPrice2,00")
-    println("Tax: R$$tax2,00")
-    println("Final Price: R$$total2,00")
-    println()
+    val summary2 = """
+   Transaction Summary ======
+    
+    Original Price: R$$originalPrice2,00
+    Tax: R$$tax2,00
+    Final Price: R$$total2,00
+    
+    """.trimIndent()
+    println(summary2)
 
     val total3 = originalPrice3 + tax
+    val summary3 = """
+        
+    Transaction Summary === ===
 
-    println("Transaction Summary ======")
-    println()
-    println("Original price: R$$originalPrice3,00")
-    println("Tax: R$$tax,00")
-    println("Promotion: $promotion2")
-    println("Final Price: R$$total3,00")
-    println()
+    Original price : R$$originalPrice3, 00
+    Tax: R$$tax, 00
+    Promotion: $promotion2
+    Final Price : R $$total3, 00
+    """.trimIndent()
+    println(summary3)
 }
